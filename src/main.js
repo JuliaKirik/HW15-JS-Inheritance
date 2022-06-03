@@ -20,13 +20,6 @@ Clock.prototype.start = function() {
     this.render();
     this.timer = setInterval(() => this.render(), 1000);
 }
-Clock.prototype.setFormat = function (format = 'full') {
-    if (format === 'short') {
-        this.formatFull = false;
-    } else {
-        this.formatFull = true;
-    }
-}
 function FullFormatClock(clockNode) {
     Clock.call(this, clockNode);
 }
